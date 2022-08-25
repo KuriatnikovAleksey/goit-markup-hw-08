@@ -1,0 +1,35 @@
+.quality__title--visually-hidden {
+  @extend .visually-hidden;
+}
+.quality {
+  &__list {
+    @extend %list;
+
+    display: flex;
+  }
+  &__item {
+    width: calc((100% - 90px) / 4);
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+  &__text {
+    color: $secondary-font-color;
+  }
+}
+.item__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}

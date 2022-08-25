@@ -1,0 +1,38 @@
+.footer__address {
+  width: 231px;
+  margin-right: 70px;
+}
+.footer__list {
+  @extend %list;
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.footer__link {
+  @extend %link;
+
+  display: block;
+  font-style: normal;
+  color: $white-font-color;
+  margin-bottom: 9px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--grey {
+    @extend %link;
+
+    font-style: normal;
+    color: $grey-font-color;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover,
+  &:focus,
+  &--grey:hover,
+  &--grey:focus {
+    color: $hover-font-color;
+  }
+}

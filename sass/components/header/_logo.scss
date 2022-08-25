@@ -1,0 +1,14 @@
+.logo {
+  @extend %link;
+
+  display: block;
+  font-family: $secondary-font, $default-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $primary-logo-color;
+
+  &__text--dark {
+    color: $secondary-logo-color;
+  }
+}
