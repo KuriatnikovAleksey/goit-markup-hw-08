@@ -5,7 +5,7 @@
   &__list {
     @extend %list;
 
-    display: flex;
+    // display: flex;
   }
   &__item {
     width: calc((100% - 90px) / 4);

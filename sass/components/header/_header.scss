@@ -3,6 +3,15 @@
 }
 
 .container--header {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
+}
+.menu__button .icon__close {
+  display: none;
+}
+.menu__button.is-open .icon__close {
+  display: block;
+}
+.menu__button.is-open .icon__open {
+  display: none;
 }

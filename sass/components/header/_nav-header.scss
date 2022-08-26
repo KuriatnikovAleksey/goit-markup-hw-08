@@ -1,14 +1,17 @@
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // flex-grow: 1;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 
   &__list {
     @extend %list;
 
-    display: flex;
-    margin-left: 93px;
+    //display: inline-block;
+    //margin-left: 93px;
 
     font-weight: 500;
     line-height: 1.14;
@@ -21,8 +24,8 @@
     @extend %link;
 
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    //padding-top: 32px;
+    //padding-bottom: 32px;
 
     transition-property: color;
     transition-duration: 250ms;
@@ -36,13 +39,13 @@
     padding-bottom: 0;
     color: $hover-font-color;
   }
-  &__link--current::after {
-    display: block;
-    content: "";
-    margin-top: 28px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: currentColor;
-  }
+  // &__link--current::after {
+  //   display: block;
+  //   content: "";
+  //   margin-top: 28px;
+  //   width: 100%;
+  //   height: 4px;
+  //   border-radius: 2px;
+  //   background-color: currentColor;
+  // }
 }
