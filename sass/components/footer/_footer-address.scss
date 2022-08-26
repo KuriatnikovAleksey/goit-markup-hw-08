@@ -1,12 +1,19 @@
 .footer__address {
-  width: 231px;
-  margin-right: 70px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 232px;
+  //margin-right: 70px;
 }
 .footer__list {
   @extend %list;
 }
 .footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 .footer__link {
   @extend %link;
@@ -14,10 +21,14 @@
   display: block;
   font-style: normal;
   color: $white-font-color;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 
   &--grey {
     @extend %link;

@@ -1,13 +1,17 @@
 .footer-social {
   //margin-right: 93px;
+  margin: 0 auto;
+  max-width: 206px;
+  margin-bottom: 60px;
   &__header {
-    margin-top: 12px;
+    //margin-top: 12px;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
 
     color: $white-font-color;
   }

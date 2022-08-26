@@ -10,17 +10,27 @@
   &__list {
     @extend %list;
 
-    //display: flex;
-    //column-gap: 30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
   &__item {
-    max-width: 270px;
-    //flex-basis: calc(100% / 4 - 30px);
+    width: 270px;
+    margin-bottom: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
     background-color: #fff;
+
+    @media screen and (min-width: 768px) {
+      // width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 4 - 30px);
+    }
   }
   &__img {
     display: block;
@@ -28,8 +38,12 @@
 }
 .content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 
   &__title {
     margin-bottom: 10px;

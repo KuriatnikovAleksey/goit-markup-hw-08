@@ -5,13 +5,23 @@
   &__list {
     @extend %list;
 
-    // display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
   &__item {
-    width: calc((100% - 90px) / 4);
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
   }
   &__item:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
   &__title {
     margin-bottom: 10px;
@@ -19,6 +29,11 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
   }
   &__text {
     color: $secondary-font-color;

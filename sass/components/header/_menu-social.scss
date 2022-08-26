@@ -1,4 +1,4 @@
-.menu-social__list {
+.mobile-social__list {
   @extend %list;
 
   display: flex;
@@ -10,14 +10,13 @@
 
   color: #2196f3;
 }
-.menu-social__item {
+.mobile-social__item {
   &:not(:last-child) {
-    // color: red;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     margin-right: 5px;
     padding-right: 5px;
   }
 }
-.menu-social__link {
+.mobile-social__link {
   @extend %link;
 }

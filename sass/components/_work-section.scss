@@ -1,4 +1,7 @@
 .work {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
   padding-top: 0;
   &__header {
     margin-bottom: 50px;
@@ -9,14 +12,14 @@
   }
   &__list {
     @extend %list;
-    //display: flex;
+    display: flex;
   }
   &__item {
     max-width: 370px;
-    //width: calc((100% - 60px) / 3);
+    width: calc((100% - 60px) / 3);
   }
   &__item:not(:last-child) {
-    //margin-right: 30px;
+    margin-right: 30px;
   }
 }
 .item__block {

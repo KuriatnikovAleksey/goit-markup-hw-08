@@ -3,15 +3,34 @@
 }
 
 .container--header {
-  // display: flex;
+  //display: flex;
   // align-items: center;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
-.menu__button .icon__close {
-  display: none;
-}
-.menu__button.is-open .icon__close {
-  display: block;
-}
-.menu__button.is-open .icon__open {
-  display: none;
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 10px 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  &:hover,
+  &:focus {
+    fill: $hover-font-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
