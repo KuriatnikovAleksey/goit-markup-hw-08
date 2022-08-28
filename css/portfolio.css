@@ -366,7 +366,7 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 480px;
+    width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -409,12 +409,10 @@ h6 {
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (max-width: 767px) {
-  .container--header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.container--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu-toggle {
@@ -458,21 +456,36 @@ h6 {
   color: #000000;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
 @media screen and (max-width: 767px) {
   .nav {
     display: none;
   }
 }
 .nav__list {
+  display: flex;
+  margin-left: 88px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    margin-left: 93px;
+  }
 }
 .nav__item:not(:last-child) {
   margin-right: 50px;
 }
 .nav__link {
   display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -483,6 +496,15 @@ h6 {
 .nav__link--current {
   padding-bottom: 0;
   color: #2196f3;
+}
+.nav__link--current::after {
+  display: block;
+  content: "";
+  margin-top: 28px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: currentColor;
 }
 
 .mobile-social__list {
@@ -567,14 +589,31 @@ h6 {
   margin-bottom: 32px;
 }
 
+@media screen and (min-width: 1200px) {
+  .contact__list {
+    display: flex;
+  }
+}
 .contact__icon {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon {
+    margin-right: 10px;
+  }
 }
 .contact__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__item:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 .contact__link {
+  display: flex;
   align-items: center;
   font-weight: 500;
   line-height: 1.14;
@@ -685,6 +724,13 @@ h6 {
   background-color: #2f303a;
 }
 
+@media screen and (min-width: 768px) {
+  .container--footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .logo--footer {
   margin-bottom: 20px;
 }
@@ -772,6 +818,15 @@ h6 {
   background-color: #2196f3;
 }
 
+.footer-form {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form {
+    width: 450px;
+  }
+}
 .form-subscribe__input {
   width: 100%;
   padding: 15px 16px;
