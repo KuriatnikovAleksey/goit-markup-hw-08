@@ -1,10 +1,16 @@
 .footer-social {
-  //margin-right: 93px;
   margin: 0 auto;
   max-width: 206px;
   margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin: 5px 74px 0px 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-top: 12px;
+    margin-right: 93px;
+  }
   &__header {
-    //margin-top: 12px;
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -14,6 +20,9 @@
     text-align: center;
 
     color: $white-font-color;
+    @media screen and (min-width: 1200px) {
+      text-align: left;
+    }
   }
   &__list {
     @extend %list;

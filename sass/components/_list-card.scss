@@ -1,14 +1,30 @@
 .card {
   &__list {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    margin: -15px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // margin: -15px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
   }
   &__item {
-    width: calc(100% / 3 - 30px);
-    margin: 15px;
+    //width: calc(100% / 3 - 30px);
+    //margin: 15px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
     border: 1px solid $border-color;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
   &__link {
     @extend %link;

@@ -105,12 +105,25 @@
   }
   &__terms {
     color: $secondary-font-color;
+    font-size: 12px;
+    line-height: 1.17;
+    @media screen and (min-width: 1200px) {
+      line-height: 1.71;
+      font-size: 14px;
+    }
   }
   &__link-policy {
     margin-left: 3px;
 
+    font-size: 12px;
+    line-height: 1.17;
     color: $primary-logo-color;
     transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 1200px) {
+      line-height: 1.71;
+      font-size: 14px;
+    }
   }
   &__link-policy:focus {
     outline-color: var(--hover-font-color);

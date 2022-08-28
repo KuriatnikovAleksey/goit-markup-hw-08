@@ -1,25 +1,36 @@
-.footer-form {
-  margin: 0 auto;
-}
 @media screen and (min-width: 768px) {
   .footer-form {
-    width: 450px;
+    margin-left: 151px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    margin-left: 0px;
+    margin-top: 12px;
   }
 }
 .footer-form__header {
   @extend .footer-social__header;
 }
 .form-subscribe {
-  //display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
   &__input {
     width: 100%;
-    //max-width: 450px;
     padding: 15px 16px;
     margin-bottom: 20px;
     border-radius: 4px;
     border-color: rgba(255, 255, 255, 0.3);
     background-color: inherit;
     color: rgba(255, 255, 255, 0.6);
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+    }
   }
   &__input:focus {
     border-color: $btn-bg-color;
@@ -48,6 +59,9 @@
     border-radius: 4px;
 
     cursor: pointer;
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
   }
   &__icon {
     margin-left: 10px;
