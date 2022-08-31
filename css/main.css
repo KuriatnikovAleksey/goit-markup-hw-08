@@ -409,6 +409,12 @@ textarea {
   resize: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 p,
 h1,
 h2,
@@ -720,12 +726,10 @@ h6 {
   padding: 10px 32px;
 }
 
-@media screen and (min-width: 768px) {
-  .quality__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.quality__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .quality__item {
   width: 100%;
@@ -739,9 +743,6 @@ h6 {
   .quality__item {
     flex-basis: calc((100% - 90px) / 4);
   }
-}
-.quality__item:not(:last-child) {
-  margin-bottom: 30px;
 }
 .quality__title {
   margin-bottom: 10px;
@@ -773,7 +774,7 @@ h6 {
 .work {
   padding-top: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .work {
     display: none;
   }
@@ -787,13 +788,11 @@ h6 {
 }
 .work__list {
   display: flex;
+  gap: 30px;
 }
 .work__item {
-  max-width: 370px;
+  width: 100%;
   width: calc((100% - 60px) / 3);
-}
-.work__item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .item__block {
@@ -825,33 +824,37 @@ h6 {
   background-color: #f5f4fa;
 }
 .team__header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+@media screen and (min-width: 1200px) {
+  .team__header {
+    margin-bottom: 50px;
   }
 }
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 .team__item {
-  width: 270px;
-  margin-bottom: 30px;
+  width: 100%;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: #fff;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team__item {
-    flex-basis: calc(25% - 30px);
+    width: calc((100% - 30px) / 2);
   }
 }
-.team__img {
-  display: block;
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .content {
@@ -905,13 +908,14 @@ h6 {
 }
 .clients__header {
   margin-bottom: 30px;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
 @media screen and (min-width: 1200px) {
   .clients__header {
     margin-bottom: 50px;
+    font-size: 36px;
   }
 }
 .clients__list {

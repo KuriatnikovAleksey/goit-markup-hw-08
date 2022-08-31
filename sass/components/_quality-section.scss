@@ -4,12 +4,9 @@
 .quality {
   &__list {
     @extend %list;
-
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
   &__item {
     width: 100%;
@@ -19,9 +16,6 @@
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - 90px) / 4);
     }
-  }
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
   }
   &__title {
     margin-bottom: 10px;

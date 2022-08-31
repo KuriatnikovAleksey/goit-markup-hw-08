@@ -200,37 +200,79 @@
           <ul class="work__list list">
             <li class="work__item">
               <div class="item__block">
-                <img
-                  class="item__img"
-                  src="./images/img1.jpg"
-                  width="370"
-                  height="294"
-                  alt="Планшет и клавиатура"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/work/img1.webp    1x,
+                      ./images/work/img1-2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    class="item__img"
+                    srcset="
+                      ./images/work/img1.jpg    1x,
+                      ./images/work/img1-2x.jpg 2x
+                    "
+                    src="./images/work/img1.jpg"
+                    width="370"
+                    height="294"
+                    alt="Планшет и клавиатура"
+                  />
+                </picture>
                 <p class="item__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="work__item">
               <div class="item__block">
-                <img
-                  class="item__img"
-                  src="./images/img2.jpg"
-                  width="370"
-                  height="294"
-                  alt="Ноутбук и смартфон"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/work/img2.webp    1x,
+                      ./images/work/img2-2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    class="item__img"
+                    srcset="
+                      ./images/work/img2.jpg    1x,
+                      ./images/work/img2-2x.jpg 2x
+                    "
+                    src="./images/work/img2.jpg"
+                    width="370"
+                    height="294"
+                    alt="Ноутбук и смартфон"
+                  />
+                </picture>
                 <p class="item__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="work__item">
               <div class="item__block">
-                <img
-                  class="item__img"
-                  src="./images/img3.jpg"
-                  width="370"
-                  height="294"
-                  alt="Планшет и монитор"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/work/img3.webp    1x,
+                      ./images/work/img3-2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <img
+                    loading="lazy"
+                    class="item__img"
+                    srcset="
+                      ./images/work/img3.jpg    1x,
+                      ./images/work/img3-2x.jpg 2x
+                    "
+                    src="./images/work/img3.jpg"
+                    width="370"
+                    height="294"
+                    alt="Планшет и монитор"
+                  />
+                </picture>
                 <p class="item__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -243,13 +285,58 @@
           <h2 class="team__header">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team-card-img1.jpg"
-                width="270"
-                height="260"
-                alt="Мужчина дизайнер"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile-img1.webp    1x,
+                    ./images/team/mobile-img1-2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img1.webp    1x,
+                    ./images/team/tab-img1-2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img1.webp    1x,
+                    ./images/team/pc-img1-2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile-img1.jpg    1x,
+                    ./images/team/mobile-img1-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img1.jpg    1x,
+                    ./images/team/tab-img1-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img1.jpg    1x,
+                    ./images/team/pc-img1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/mobile-img1.jpg"
+                  alt="Мужчина дизайнер"
+                />
+              </picture>
               <div class="content">
                 <h3 class="content__title">Игорь Демьяненко</h3>
                 <p class="content__text">Product Designer</p>
@@ -306,13 +393,58 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team-card-img2.jpg"
-                width="270"
-                height="260"
-                alt="Женщина разработчик"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile-img2.webp    1x,
+                    ./images/team/mobile-img2-2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img2.webp    1x,
+                    ./images/team/tab-img2-2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img2.webp    1x,
+                    ./images/team/pc-img2-2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile-img2.jpg    1x,
+                    ./images/team/mobile-img2-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img2.jpg    1x,
+                    ./images/team/tab-img2-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img2.jpg    1x,
+                    ./images/team/pc-img2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/mob-team-card-img2.jpg"
+                  alt="Женщина разработчик"
+                />
+              </picture>
               <div class="content">
                 <h3 class="content__title">Ольга Репина</h3>
                 <p class="content__text">Frontend Developer</p>
@@ -369,13 +501,58 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team-card-img3.jpg"
-                width="270"
-                height="260"
-                alt="Мужчина маркетолог"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile-img3.webp    1x,
+                    ./images/team/mobile-img3-2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img3.webp    1x,
+                    ./images/team/tab-img3-2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img3.webp    1x,
+                    ./images/team/pc-img3-2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile-img3.jpg    1x,
+                    ./images/team/mobile-img3-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img3.jpg    1x,
+                    ./images/team/tab-img3-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img3.jpg    1x,
+                    ./images/team/pc-img3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/mobile-img3.jpg"
+                  alt="Мужчина маркетолог"
+                />
+              </picture>
               <div class="content">
                 <h3 class="content__title">Николай Тарасов</h3>
                 <p class="content__text">Marketing</p>
@@ -432,13 +609,58 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team-card-img4.jpg"
-                width="270"
-                height="260"
-                alt="Мужчина дизайнер"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile-img4.webp    1x,
+                    ./images/team/mobile-img4-2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img4.webp    1x,
+                    ./images/team/tab-img4-2x.webp 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img4.webp    1x,
+                    ./images/team/pc-img4-2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile-img4.jpg    1x,
+                    ./images/team/mobile-img4-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab-img4.jpg    1x,
+                    ./images/team/tab-img4-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/pc-img4.jpg    1x,
+                    ./images/team/pc-img4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__img"
+                  src="./images/team/mobile-img4.jpg"
+                  alt="Мужчина дизайнер"
+                />
+              </picture>
               <div class="content">
                 <h3 class="content__title">Михаил Ермаков</h3>
                 <p class="content__text">UI Designer</p>

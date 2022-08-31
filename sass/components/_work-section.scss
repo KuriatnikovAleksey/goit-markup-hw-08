@@ -1,5 +1,5 @@
 .work {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
   padding-top: 0;
@@ -13,13 +13,11 @@
   &__list {
     @extend %list;
     display: flex;
+    gap: 30px;
   }
   &__item {
-    max-width: 370px;
+    width: 100%;
     width: calc((100% - 60px) / 3);
-  }
-  &__item:not(:last-child) {
-    margin-right: 30px;
   }
 }
 .item__block {
