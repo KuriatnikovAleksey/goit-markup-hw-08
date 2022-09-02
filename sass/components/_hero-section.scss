@@ -5,8 +5,8 @@
   margin: 0 auto;
   background-color: $secondary-bg-color;
   text-align: center;
-  background-image: $bg-gradient, url("../images/hero/desktop-hero.jpg");
-  background-image: $bg-gradient, url("../images/hero/desktop-hero.webp");
+  background-image: $bg-gradient, url("../images/hero/mobile-hero.jpg");
+  background-image: $bg-gradient, url("../images/hero/mobile-hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
   @include retina-2x {
