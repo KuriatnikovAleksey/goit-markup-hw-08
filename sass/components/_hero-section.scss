@@ -6,39 +6,39 @@
   background-color: $secondary-bg-color;
   text-align: center;
   background-image: $bg-gradient, url("../../images/hero/desktop-hero.jpg");
-  background-image: $bg-gradient, url("../../images/hero/desktop-hero.webp");
+  //background-image: $bg-gradient, url("../../images/hero/desktop-hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
   @include retina-2x {
     background-image: $bg-gradient, url(../../images/hero/mobile-hero2x.jpg);
-    background-image: $bg-gradient, url(../../images/hero/mobile-hero2x.webp);
+    //background-image: $bg-gradient, url(../../images/hero/mobile-hero2x.webp);
   }
   @include retina-3x {
     background-image: $bg-gradient, url(../../images/hero/mobile-hero3x.jpg);
-    background-image: $bg-gradient, url(../../images/hero/mobile-hero3x.webp);
+    //background-image: $bg-gradient, url(../../images/hero/mobile-hero3x.webp);
   }
   @include mobile {
     background-image: $bg-gradient, url(../../images/hero/tablet-hero.jpg);
-    background-image: $bg-gradient, url(../../images/hero/tablet-hero.webp);
+    //background-image: $bg-gradient, url(../../images/hero/tablet-hero.webp);
     @include retina-2x {
       background-image: $bg-gradient, url(../../images/hero/tablet-hero2x.jpg);
-      background-image: $bg-gradient, url(../../images/hero/tablet-hero2x.webp);
+      //background-image: $bg-gradient, url(../../images/hero/tablet-hero2x.webp);
     }
     @include retina-3x {
       background-image: $bg-gradient, url(../../images/hero/tablet-hero3x.jpg);
-      background-image: $bg-gradient, url(../../images/hero/tablet-hero3x.webp);
+      //background-image: $bg-gradient, url(../../images/hero/tablet-hero3x.webp);
     }
   }
   @include tablet {
     background-image: $bg-gradient, url(../../images/hero/desktop-hero.jpg);
-    background-image: $bg-gradient, url(../../images/hero/desktop-hero.webp);
+    //background-image: $bg-gradient, url(../../images/hero/desktop-hero.webp);
     @include retina-2x {
       background-image: $bg-gradient, url(../../images/hero/desktop-hero2x.jpg);
-      background-image: $bg-gradient, url(../../images/hero/desktop-hero2x.webp);
+      //background-image: $bg-gradient, url(../../images/hero/desktop-hero2x.webp);
     }
     @include retina-3x {
       background-image: $bg-gradient, url(../../images/hero/desktop-hero3x.jpg);
-      background-image: $bg-gradient, url(../../images/hero/desktop-hero3x.webp);
+      //background-image: $bg-gradient, url(../../images/hero/desktop-hero3x.webp);
     }
   }
   @include desktop {
@@ -71,3 +71,4 @@
     padding: 10px 32px;
   }
 }
+https: ; //kuriatnikovaleksey.github.io/goit-markup-hw-08/
