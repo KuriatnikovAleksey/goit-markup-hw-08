@@ -5,91 +5,43 @@
   margin: 0 auto;
   background-color: $secondary-bg-color;
   text-align: center;
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url("../../images/hero/mobile-hero.jpg");
+  background-image: $bg-gradient, url("../../images/hero/desktop-hero.jpg");
+  background-image: $bg-gradient, url("../../images/hero/desktop-hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../../images/hero/mobile-hero2x.jpg);
+  @include retina-2x {
+    background-image: $bg-gradient, url(../../images/hero/mobile-hero2x.jpg);
+    background-image: $bg-gradient, url(../../images/hero/mobile-hero2x.webp);
   }
-  @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../../images/hero/mobile-hero3x.jpg);
+  @include retina-3x {
+    background-image: $bg-gradient, url(../../images/hero/mobile-hero3x.jpg);
+    background-image: $bg-gradient, url(../../images/hero/mobile-hero3x.webp);
   }
-  @media screen and (min-width: 480px) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../../images/hero/tablet-hero.jpg);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../../images/hero/tablet-hero2x.jpg);
+  @include mobile {
+    background-image: $bg-gradient, url(../../images/hero/tablet-hero.jpg);
+    background-image: $bg-gradient, url(../../images/hero/tablet-hero.webp);
+    @include retina-2x {
+      background-image: $bg-gradient, url(../../images/hero/tablet-hero2x.jpg);
+      background-image: $bg-gradient, url(../../images/hero/tablet-hero2x.webp);
     }
-    @media (min-device-pixel-ratio: 3),
-      (min-resolution: 288dpi),
-      (min-resolution: 3dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../../images/hero/tablet-hero3x.jpg);
+    @include retina-3x {
+      background-image: $bg-gradient, url(../../images/hero/tablet-hero3x.jpg);
+      background-image: $bg-gradient, url(../../images/hero/tablet-hero3x.webp);
     }
   }
-  @media screen and (min-width: 768px) {
-    background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../../images/hero/desktop-hero.jpg);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../../images/hero/desktop-hero2x.jpg);
+  @include tablet {
+    background-image: $bg-gradient, url(../../images/hero/desktop-hero.jpg);
+    background-image: $bg-gradient, url(../../images/hero/desktop-hero.webp);
+    @include retina-2x {
+      background-image: $bg-gradient, url(../../images/hero/desktop-hero2x.jpg);
+      background-image: $bg-gradient, url(../../images/hero/desktop-hero2x.webp);
     }
-    @media (min-device-pixel-ratio: 3),
-      (min-resolution: 288dpi),
-      (min-resolution: 3dppx) {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../../images/hero/desktop-hero3x.jpg);
+    @include retina-3x {
+      background-image: $bg-gradient, url(../../images/hero/desktop-hero3x.jpg);
+      background-image: $bg-gradient, url(../../images/hero/desktop-hero3x.webp);
     }
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -100,11 +52,14 @@
     color: $white-font-color;
 
     font-weight: 900;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    @media screen and (min-width: 1200px) {
+    @include mobile {
+      font-size: 26px;
+    }
+    @include desktop {
       font-size: 44px;
       line-height: 1.36;
       max-width: 696px;

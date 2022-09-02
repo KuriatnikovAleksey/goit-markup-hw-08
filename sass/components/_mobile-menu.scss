@@ -2,12 +2,15 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
   z-index: 10;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -15,7 +18,7 @@
     transform: translateX(0);
   }
 }
-@media screen and (min-width: 768px) {
+@include tablet {
   .menu-container {
     display: none;
   }
@@ -29,21 +32,24 @@
 .mobile-menu {
   &__list {
     @extend %list;
-
-    margin-bottom: 302px;
   }
   &__item {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 1.17;
     letter-spacing: 0.02em;
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+    @include mobile {
+      font-size: 40px;
+    }
   }
 
   &__link {
     @extend %link;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
@@ -58,11 +64,14 @@
 .mobile-contacts__item {
   &:nth-child(odd) {
     font-weight: 500;
-    font-size: 34px;
+    font-size: 24px;
     line-height: 1.18;
     letter-spacing: 0.02em;
 
     color: $hover-font-color;
+    @include mobile {
+      font-size: 34px;
+    }
   }
   &:nth-child(even) {
     font-weight: 500;
@@ -71,11 +80,46 @@
     letter-spacing: 0.02em;
 
     color: $secondary-font-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: $hover-font-color;
+    }
   }
+
   &:not(:last-child) {
     margin-bottom: 32px;
   }
 }
+
 .mobile-contacts__link {
+  @extend %link;
+}
+.mobile-social__list {
+  @extend %list;
+
+  display: flex;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+
+  color: $hover-font-color;
+  @include mobile {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+}
+.mobile-social__item {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    margin-right: 5px;
+    padding-right: 5px;
+  }
+}
+.mobile-social__link {
   @extend %link;
 }

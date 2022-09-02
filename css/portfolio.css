@@ -340,13 +340,13 @@ body {
   margin: -1px;
 }
 
-.footer-social__list, .footer__list, .card__list, .filter__list, .contact__list, .mobile-contacts__list, .mobile-menu__list, .mobile-social__list, .nav__list {
+.footer-social__list, .footer__list, .card__list, .filter__list, .contact__list, .mobile-social__list, .mobile-contacts__list, .mobile-menu__list, .nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.footer-social__link, .footer__link--grey, .footer__link, .card__link, .contact__link, .mobile-contacts__link, .mobile-menu__link, .mobile-social__link, .nav__link, .logo {
+.footer-social__link, .footer__link--grey, .footer__link, .card__link, .contact__link, .mobile-social__link, .mobile-contacts__link, .mobile-menu__link, .nav__link, .logo {
   text-decoration: none;
   color: inherit;
 }
@@ -427,13 +427,13 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
   padding: 10px 0;
   background-color: transparent;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   outline: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-toggle:hover, .menu-toggle:focus {
   fill: #2196f3;
@@ -513,31 +513,19 @@ h6 {
   background-color: currentColor;
 }
 
-.mobile-social__list {
-  display: flex;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.22;
-  letter-spacing: 0.02em;
-  color: #2196f3;
-}
-
-.mobile-social__item:not(:last-child) {
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
-  margin-right: 5px;
-  padding-right: 5px;
-}
-
 .menu-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
   z-index: 10;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
@@ -557,17 +545,22 @@ h6 {
   right: 15px;
 }
 
-.mobile-menu__list {
-  margin-bottom: 302px;
-}
 .mobile-menu__item {
   font-weight: 500;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.02em;
 }
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
+}
+@media screen and (min-width: 480px) {
+  .mobile-menu__item {
+    font-size: 40px;
+  }
+}
+.mobile-menu__link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu__link:hover, .mobile-menu__link:focus {
   color: #2196f3;
@@ -579,10 +572,15 @@ h6 {
 
 .mobile-contacts__item:nth-child(odd) {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+@media screen and (min-width: 480px) {
+  .mobile-contacts__item:nth-child(odd) {
+    font-size: 34px;
+  }
 }
 .mobile-contacts__item:nth-child(even) {
   font-weight: 500;
@@ -590,9 +588,34 @@ h6 {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-contacts__item:nth-child(even):hover, .mobile-contacts__item:nth-child(even):focus {
+  color: #2196f3;
 }
 .mobile-contacts__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.mobile-social__list {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+  color: #2196f3;
+}
+@media screen and (min-width: 480px) {
+  .mobile-social__list {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.mobile-social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 5px;
+  padding-right: 5px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -603,6 +626,26 @@ h6 {
 .contact__icon {
   fill: currentColor;
   margin-right: 8px;
+}
+.contact__icon--mail {
+  width: 14px;
+  height: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon--mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+.contact__icon--tel {
+  width: 10px;
+  height: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__icon--tel {
+    width: 10px;
+    height: 14px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .contact__icon {
@@ -628,6 +671,12 @@ h6 {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .contact__link:hover, .contact__link:focus {
   color: #2196f3;

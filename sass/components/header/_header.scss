@@ -6,11 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // @media screen and (max-width: 767px) {
-  //   display: flex;
-  //   align-items: center;
-  // }
 }
+
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -18,19 +15,22 @@
   align-items: center;
   justify-content: center;
 
-  margin: 0;
   padding: 10px 0;
+
   background-color: transparent;
   cursor: pointer;
   border: none;
   border-radius: 50%;
   outline: none;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &:hover,
   &:focus {
     fill: $hover-font-color;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     display: none;
   }
 }

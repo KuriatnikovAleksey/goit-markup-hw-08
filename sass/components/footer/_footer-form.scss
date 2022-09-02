@@ -1,9 +1,9 @@
-@media screen and (min-width: 768px) {
+@include tablet {
   .footer-form {
     margin-left: 151px;
   }
 }
-@media screen and (min-width: 1200px) {
+@include desktop {
   .footer-form {
     margin-left: 0px;
     margin-top: 12px;
@@ -13,7 +13,7 @@
   @extend .footer-social__header;
 }
 .form-subscribe {
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     display: flex;
   }
   &__input {
@@ -24,10 +24,10 @@
     border-color: rgba(255, 255, 255, 0.3);
     background-color: inherit;
     color: rgba(255, 255, 255, 0.6);
-    @media screen and (min-width: 768px) {
+    @include tablet {
       width: 450px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       width: 358px;
       margin-bottom: 0;
     }
@@ -59,7 +59,7 @@
     border-radius: 4px;
 
     cursor: pointer;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-left: 12px;
     }
   }

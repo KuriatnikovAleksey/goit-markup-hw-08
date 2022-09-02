@@ -3,10 +3,10 @@
   max-width: 206px;
   margin-bottom: 60px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin: 5px 74px 0px 0px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-top: 12px;
     margin-right: 93px;
   }
@@ -20,7 +20,7 @@
     text-align: center;
 
     color: $white-font-color;
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       text-align: left;
     }
   }
