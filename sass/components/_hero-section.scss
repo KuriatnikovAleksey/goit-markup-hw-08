@@ -15,7 +15,7 @@
   }
   @include retina-3x {
     background-image: $bg-gradient, url(../images/hero/mobile-hero3x.jpg);
-    background-image: $bg-gradient, url(.../images/hero/mobile-hero3x.webp);
+    background-image: $bg-gradient, url(../images/hero/mobile-hero3x.webp);
   }
   @include mobile {
     background-image: $bg-gradient, url(../images/hero/tablet-hero.jpg);
